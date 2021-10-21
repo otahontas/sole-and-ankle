@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
   /* Reset sizing to include borders */
   *, *:before, *:after {
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
   }
 
   /* Create a stacking context, without a z-index. This ensures that all portal content
@@ -16,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* Add initial height for app */
+  /* For some reason, font settings need to be applied to here as well. Investigate */
   html, body, #root {
     height: 100%;
     font-family: 'Raleway', sans-serif;
