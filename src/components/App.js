@@ -1,9 +1,10 @@
 import GlobalStyle from "./GlobalStyle";
+import SuperHeader from "./SuperHeader";
 
 const App = () => {
   return (
     <>
-      <p>Testing</p>
+      <SuperHeader />
       <GlobalStyle />
     </>
   );
