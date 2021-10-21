@@ -1,15 +1,15 @@
-import "./global.css";
 import theme from "../src/theme";
+import GlobalStyle from "../src/components/GlobalStyle";
+import { addDecorator } from "@storybook/react";
 
 import { ThemeProvider } from "styled-components";
 
-export const decorators = [
-  Story => (
-    <ThemeProvider theme={theme}>
-      <Story />
-    </ThemeProvider>
-  ),
-];
+addDecorator(story => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    {story()}
+  </ThemeProvider>
+));
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

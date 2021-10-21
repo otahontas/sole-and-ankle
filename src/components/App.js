@@ -1,11 +1,12 @@
-import styled from "styled-components";
-
-const Testing = styled.p`
-  color: ${p => p.theme.colors.primary};
-`;
+import GlobalStyle from "./GlobalStyle";
 
 const App = () => {
-  return <Testing>Writings here</Testing>;
+  return (
+    <>
+      <p>Testing</p>
+      <GlobalStyle />
+    </>
+  );
 };
 
 export default App;

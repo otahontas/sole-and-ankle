@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const Base = styled.div`
-  width: fit-content;
-  padding: 8px;
   border-radius: 2px;
-  font-family: Raleway;
+  color: ${p => p.theme.colors.white};
   font-size: ${14 / 16}rem;
   font-weight: ${p => p.theme.weights.bold};
-  color: ${p => p.theme.colors.white};
+  padding: 8px;
+  width: fit-content;
 `;
 
 const Hot = styled(Base)`
