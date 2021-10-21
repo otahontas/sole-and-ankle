@@ -6,10 +6,13 @@ import SearchInput from './SearchInput';
   component={SearchInput}
 />
 
-export const Template = () => <SearchInput />;
-
-# SearchInput
-
-<Story name="Default">
-  {Template.bind({})}
+<Story 
+  name="Default"
+  parameters={{
+    backgrounds: {
+      default: 'dark',
+    }
+  }}
+>
+  <SearchInput />
 </Story>

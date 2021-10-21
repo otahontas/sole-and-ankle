@@ -17,20 +17,20 @@ const Sale = styled(Base)`
   background-color: ${p => p.theme.colors.primary};
 `;
 
-const getComponent = variant => {
+const getComponentAndContent = variant => {
   switch (variant) {
     case "hot":
-      return Hot;
+      return [Hot, "Just Released!"];
     case "sale":
-      return Sale;
+      return [Sale, "Sale"];
     default:
       throw new Error(`${variant} was not a proper variant for banner`);
   }
 };
 
-const ShoeBanner = ({ variant }) => {
-  const Component = getComponent(variant);
-  return <Component>Just released!</Component>;
+const ShoeBanner = ({ variant, className }) => {
+  const [Component, text] = getComponentAndContent(variant);
+  return <Component className={className}>{text}</Component>;
 };
 
 export default ShoeBanner;

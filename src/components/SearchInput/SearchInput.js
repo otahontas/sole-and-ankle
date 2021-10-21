@@ -25,7 +25,7 @@ const InputRow = styled.input`
   font-weight: ${p => p.theme.weights.bold};
 
   &:focus {
-    outline-offset: 1px;
+    outline-offset: 2px;
   }
 
   &::placeholder {
@@ -42,7 +42,7 @@ const SearchIconWrapper = styled(Search)`
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 4px;
+  margin: 4px;
 `;
 
 const SearchInput = () => {
