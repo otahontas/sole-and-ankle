@@ -1,0 +1,23 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import ShoeBanner from './ShoeBanner';
+
+<Meta
+  title="ShoeBanner"
+  component={ShoeBanner}
+  argTypes={{
+    variant: {
+      control: {
+        type: 'select',
+        options: ['hot', 'sale'],
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <ShoeBanner {...args} />;
+
+# ShoeBanner
+
+<Story name="Default" args={{ variant: 'hot' }}>
+  {Template.bind({})}
+</Story>
