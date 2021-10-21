@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     line-height: 1.45;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
   }
@@ -24,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   html, body, #root {
     height: 100%;
     font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     line-height: 1.45;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;

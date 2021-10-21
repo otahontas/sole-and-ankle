@@ -1,10 +1,10 @@
 import GlobalStyle from "./GlobalStyle";
-import SuperHeader from "./SuperHeader";
+import Header from "./Header";
 
 const App = () => {
   return (
     <>
-      <SuperHeader />
+      <Header />
       <GlobalStyle />
     </>
   );
