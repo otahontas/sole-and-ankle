@@ -57,13 +57,14 @@ const getBannerVariant = ({ releaseDate, salePrice }) => {
   return null;
 };
 
-const ShoeCard = ({ shoe }) => {
+const ShoeCard = ({ shoe, className }) => {
+  console.log("shoe", shoe);
   const { name, imageSrc, price, salePrice, releaseDate, numOfColors } = shoe;
   const normalizedPrice = normalizeToDollars(price);
   const normalizedSalePrice = normalizeToDollars(salePrice);
   const bannerVariant = getBannerVariant({ releaseDate, salePrice });
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <ImageWrapper>
         <Image src={imageSrc} />
         {bannerVariant ? <PositionedBanner variant={bannerVariant} /> : null}

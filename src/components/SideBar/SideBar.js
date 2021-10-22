@@ -36,7 +36,7 @@ const SideBar = () => {
   return (
     <Wrapper>
       {categories.map(c => (
-        <CategoryLink current={c === current} href="#">
+        <CategoryLink key={c} current={c === current} href="#">
           {c}
         </CategoryLink>
       ))}

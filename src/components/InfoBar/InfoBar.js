@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Select from "../Select";
+import Breadcrumbs from "../Breadcrumbs";
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,11 +10,10 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const BreadCrumbs = styled.div`
+const BreadcrumbWrapper = styled.div`
   width: 248px;
-  border: 1px solid black;
-  height: 24px;
   margin-right: 32px;
+  color: ${p => p.theme.colors.gray700};
 `;
 
 const OtherContent = styled.div`
@@ -35,7 +35,9 @@ const InfoBar = () => {
 
   return (
     <Wrapper>
-      <BreadCrumbs />
+      <BreadcrumbWrapper>
+        <Breadcrumbs />
+      </BreadcrumbWrapper>
       <OtherContent>
         <CategoryName>Running</CategoryName>
         <Select
