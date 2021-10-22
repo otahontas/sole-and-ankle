@@ -10,6 +10,12 @@ const getDisplayedValue = (value, children) => {
 };
 
 const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
+const SelectionWrapper = styled.div`
   position: relative;
   width: max-content;
 `;
@@ -54,18 +60,25 @@ const ChevronIconWrapper = styled(ChevronDown)`
   pointer-events: none;
 `;
 
-const Select = ({ value, onChange, children }) => {
+const Label = styled.p`
+  color: ${p => p.theme.colors.gray700};
+`;
+
+const Select = ({ label, value, onChange, children }) => {
   const displayedValue = getDisplayedValue(value, children);
 
   return (
     <Wrapper>
-      <NativeSelect value={value} onChange={onChange}>
-        {children}
-      </NativeSelect>
-      <PresentationalBit>
-        {displayedValue}
-        <ChevronIconWrapper />
-      </PresentationalBit>
+      <Label>{label}</Label>
+      <SelectionWrapper>
+        <NativeSelect value={value} onChange={onChange}>
+          {children}
+        </NativeSelect>
+        <PresentationalBit>
+          {displayedValue}
+          <ChevronIconWrapper />
+        </PresentationalBit>
+      </SelectionWrapper>
     </Wrapper>
   );
 };

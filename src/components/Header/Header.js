@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SuperHeader from "../SuperHeader";
 
-const MainHeader = styled.div`
+const MainHeader = styled.header`
   width: 100%;
   height: 72px;
   display: flex;
@@ -41,8 +41,7 @@ const Brand = styled(LinkBase)`
 const NavLink = styled(LinkBase)`
   font-size: ${18 / 16}rem;
   text-transform: uppercase;
-  color: ${p =>
-    p.current ? p.theme.colors.secondary : p.theme.colors.gray900};
+  color: ${p => (p.current ? p.theme.colors.secondary : p.theme.colors.gray900)};
   font-weight: ${p => p.theme.weights.medium};
 `;
 
@@ -52,17 +51,11 @@ const currentPage = "Sale";
 const Nav = () => (
   <NavWrapper>
     <LinkList>
-      {links.map(link =>
-        link === currentPage ? (
-          <NavLink current key={link} href="#">
-            {link}
-          </NavLink>
-        ) : (
-          <NavLink key={link} href="#">
-            {link}
-          </NavLink>
-        )
-      )}
+      {links.map(link => (
+        <NavLink current={link === currentPage} key={link} href="#">
+          {link}
+        </NavLink>
+      ))}
     </LinkList>
   </NavWrapper>
 );

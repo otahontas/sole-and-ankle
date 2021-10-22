@@ -51,7 +51,7 @@
     ]
   },
   "prettier": {
-    "printWidht": 88,
+    "printWidth": 88,
     "arrowParens": "avoid"
   },
   "devDependencies": {
